@@ -1,70 +1,89 @@
-<!DOCTYPE html>  <!-- Declaração do tipo de documento HTML5 -->
-<html lang="pt-br">  <!-- Definindo o idioma da página como português do Brasil -->
+<!DOCTYPE html>  <!-- Declaração do tipo de documento HTML5, informando ao navegador que o conteúdo é HTML5 -->
+<html lang="pt-br">  <!-- Início do documento HTML, com o idioma definido como português do Brasil -->
 <head>
-    <meta charset="UTF-8">  <!-- Definindo o conjunto de caracteres como UTF-8, que é necessário para caracteres especiais como acentos -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Tornando a página responsiva, ajustando-se ao tamanho da tela -->
-    <title>ROCKBAND</title>  <!-- Definindo o título da página, que aparece na aba do navegador -->
+    <meta charset="UTF-8">  <!-- Define a codificação de caracteres como UTF-8, permitindo o uso de caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Torna a página responsiva, adaptando-se ao tamanho da tela do dispositivo -->
+    <title>ROCKBAND</title>  <!-- Título da página que aparece na aba do navegador -->
     <style>
+        /* Estilos para o corpo da página */
         body {
-            font-family: Arial, sans-serif;  <!-- Definindo a fonte da página -->
-            margin: 0;  <!-- Removendo margens da página -->
-            padding: 0;  <!-- Removendo padding da página -->
-            background-color: #FFFFFF;  <!-- Definindo uma cor de fundo clara para a página -->
+            font-family: Arial, sans-serif;  <!-- Define a fonte do texto como Arial, ou qualquer fonte sans-serif -->
+            margin: 0;  <!-- Remove a margem padrão do navegador -->
+            padding: 0;  <!-- Remove o padding padrão do navegador -->
+            background-color: #FFFFFF;  <!-- Define o fundo da página como branco -->
         }
+
+        /* Estilos para o cabeçalho da página */
         header {
-            background-color: #D9D9D9;  <!-- Definindo uma cor de fundo verde para o cabeçalho -->
-            color: white;  <!-- Definindo a cor do texto do cabeçalho como branca -->
-            text-align: center;  <!-- Centralizando o texto no cabeçalho -->
-            padding: 20px;  <!-- Adicionando um espaçamento interno de 20px ao cabeçalho -->
+            background-color: #D9D9D9;  <!-- Cor de fundo do cabeçalho, cinza claro -->
+            color: white;  <!-- Cor do texto do cabeçalho como branca -->
+            text-align: center;  <!-- Alinha o texto do cabeçalho ao centro -->
+            padding: 20px;  <!-- Adiciona 20px de espaço interno ao cabeçalho -->
         }
+
+        /* Estilos para a navegação */
         nav {
-            background-color: #000000;  <!-- Definindo uma cor de fundo escura para o menu de navegação -->
-            overflow: hidden;  <!-- Impedindo que elementos se "escapem" da área de navegação -->
+            background-color: #000000;  <!-- Cor de fundo do menu de navegação, preto -->
+            overflow: hidden;  <!-- Impede que os elementos do menu ultrapassem os limites da navegação -->
         }
+
+        /* Estilos para os links dentro da navegação */
         nav a {
-            color: white;  <!-- Definindo a cor do texto dos links como branca -->
-            padding: 14px 20px;  <!-- Adicionando um padding de 14px vertical e 20px horizontal aos links -->
-            text-align: center;  <!-- Centralizando o texto dos links -->
-            text-decoration: none;  <!-- Removendo a sublinha (underline) dos links -->
-            float: left;  <!-- Alinhando os links à esquerda, criando um menu horizontal -->
+            color: white;  <!-- Cor do texto dos links como branca -->
+            padding: 14px 20px;  <!-- Adiciona 14px de padding vertical e 20px horizontal aos links -->
+            text-align: center;  <!-- Centraliza o texto dentro dos links -->
+            text-decoration: none;  <!-- Remove o sublinhado padrão dos links -->
+            float: left;  <!-- Faz os links se alinharem horizontalmente (esquerda) -->
         }
+
+        /* Estilos para os links de navegação quando o mouse passa sobre eles */
         nav a:hover {
-            background-color: #ddd;  <!-- Mudando a cor de fundo dos links para um tom cinza claro quando o mouse passar sobre eles -->
-            color: black;  <!-- Mudando a cor do texto para preto quando o mouse passar sobre o link -->
+            background-color: #ddd;  <!-- Cor de fundo quando o mouse passa sobre o link, cinza claro -->
+            color: black;  <!-- Cor do texto do link fica preta ao passar o mouse -->
         }
+
+        /* Estilos para a seção principal da página */
         section {
-            padding: 20px;  <!-- Adicionando um espaçamento interno de 20px ao conteúdo principal -->
+            padding: 20px;  <!-- Adiciona 20px de espaço interno ao conteúdo da seção -->
         }
+
+        /* Estilos para o rodapé */
         footer {
-            background-color: #333;  <!-- Definindo uma cor de fundo escura para o rodapé -->
-            color: white;  <!-- Definindo a cor do texto do rodapé como branca -->
-            text-align: center;  <!-- Centralizando o texto no rodapé -->
-            padding: 10px;  <!-- Adicionando um espaçamento interno de 10px ao rodapé -->
-            position: fixed;  <!-- Fixando o rodapé na parte inferior da página, mesmo quando o usuário rolar -->
-            width: 100%;  <!-- Garantindo que o rodapé ocupe toda a largura da tela -->
-            bottom: 0;  <!-- Garantindo que o rodapé fique fixo no fundo da página -->
+            background-color: #333;  <!-- Cor de fundo do rodapé, cinza escuro -->
+            color: white;  <!-- Cor do texto do rodapé como branca -->
+            text-align: center;  <!-- Alinha o texto do rodapé ao centro -->
+            padding: 10px;  <!-- Adiciona 10px de espaço interno ao rodapé -->
+            position: fixed;  <!-- Fixação do rodapé na parte inferior da página -->
+            width: 100%;  <!-- Faz o rodapé ocupar toda a largura da página -->
+            bottom: 0;  <!-- Faz o rodapé ficar na parte inferior da tela, independentemente do rolar da página -->
         }
     </style>
 </head>
-<body>
+<body>  <!-- Início do corpo da página, onde o conteúdo visível será exibido -->
+
+    <!-- Cabeçalho da página -->
     <header>
-        <h1>Bem-vindo à Minha Página Inicial</h1>  <!-- Título principal da página, dentro do cabeçalho -->
-        <p>Este é um exemplo de estrutura básica em HTML.</p>  <!-- Parágrafo com uma breve descrição -->
+        <h1>Bem-vindo à Minha Página Inicial</h1>  <!-- Título principal dentro do cabeçalho -->
+        <p>Este é um exemplo de estrutura básica em HTML.</p>  <!-- Descrição breve abaixo do título -->
     </header>
 
+    <!-- Menu de navegação -->
     <nav>
         <a href="#home">Home</a>  <!-- Link de navegação para a seção "Home" -->
         <a href="#sobre">Sobre</a>  <!-- Link de navegação para a seção "Sobre" -->
         <a href="#contato">Contato</a>  <!-- Link de navegação para a seção "Contato" -->
     </nav>
 
+    <!-- Seção de conteúdo principal -->
     <section>
-        <h2>Sobre</h2>  <!-- Título secundário da seção "Sobre" -->
-        <p>Este é um exemplo simples de uma página inicial. Você pode adicionar mais conteúdo aqui.</p>  <!-- Texto explicativo dentro da seção "Sobre" -->
+        <h2>Sobre</h2>  <!-- Subtítulo para a seção "Sobre" -->
+        <p>Este é um exemplo simples de uma página inicial. Você pode adicionar mais conteúdo aqui.</p>  <!-- Descrição da seção -->
     </section>
 
+    <!-- Rodapé da página -->
     <footer>
-        <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>  <!-- Texto do rodapé com o símbolo de copyright -->
+        <p>&copy; 2025 ROCKBAND.</p>  <!-- Texto do rodapé com símbolo de copyright -->
     </footer>
+
 </body>
 </html>
