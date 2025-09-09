@@ -1,44 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Login Google</title>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Inicial</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-      h1 {
-        margin-bottom: 20px;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            float: left;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Login com Google</h1>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Minha Página Inicial</h1>
+        <p>Este é um exemplo de estrutura básica em HTML.</p>
+    </header>
 
-    <!-- Configuração do login -->
-    <div id="g_id_onload"
-         data-client_id="SEU_CLIENT_ID.apps.googleusercontent.com" //trocar
-         data-callback="handleCredentialResponse">
-    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
-    <!-- Botão pronto do Google -->
-    <div class="g_id_signin" data-type="standard"></div>
+    <section>
+        <h2>Sobre</h2>
+        <p>Este é um exemplo simples de uma página inicial. Você pode adicionar mais conteúdo aqui.</p>
+    </section>
 
-    <script>
-      function handleCredentialResponse(response) {
-        console.log("Token JWT do Google:", response.credential);
-
-        // Decodificar dados do usuário
-        const data = JSON.parse(atob(response.credential.split('.')[1]));
-        console.log("Usuário logado:", data);
-
-        document.body.innerHTML += `<p>Bem-vindo, ${data.name} (${data.email})</p>`;
-      }
-    </script>
-  </body>
+    <footer>
+        <p>&copy; 2025 Minha Página. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>
